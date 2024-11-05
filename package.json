@@ -1,0 +1,20 @@
+{
+  "name": "url-shortener",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev-server": "bun run --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0",
+    "prisma": "^5.22.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "express": "^4.21.1"
+  }
+}
