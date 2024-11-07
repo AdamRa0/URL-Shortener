@@ -62,13 +62,6 @@ router.get('/:shortCode', async (req: Request, res: Response) => {
 app.use(express.json());
 app.use("/shorten", router)
 
-app.get("/", (req: Request, res: Response) => {
-    res.json("Welcome to express");
-    res.statusCode = 200;
-})
-
-app.post
-
 const PORT: string | number = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
