@@ -15,9 +15,6 @@ Minimalistic API serving as a URL Shortener Service
 > Headers
 >> Content-Type: application/json
 >
-> Request Parameters
->> url: Long url to shorten
->
 > Example Request
 >> ```bash
 >>  curl -X POST -H 'Content-Type: application/json' -d '{"url": "https://youtube.com"}' localhost:3000/shorten/XYZ12DW
