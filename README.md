@@ -17,7 +17,7 @@ Minimalistic API serving as a URL Shortener Service
 >
 > Example Request
 >> ```bash
->>  curl -X POST -H 'Content-Type: application/json' -d '{"url": "https://youtube.com"}' localhost:3000/shorten/XYZ12DW
+>>  curl -X POST -H 'Content-Type: application/json' -d '{"url": "https://youtube.com"}' localhost:3000/shorten
 >> ```  
 >
 > Response
