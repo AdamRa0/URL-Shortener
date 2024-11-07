@@ -10,7 +10,7 @@ Minimalistic API serving as a URL Shortener Service
 ## Endpoint definitions
 -  /shorten
 > Shortens Long URL and returns ShortCode
-> Method: POST
+>> Method: POST
 >
 > Headers
 >> Content-Type: application/json
@@ -34,7 +34,7 @@ Minimalistic API serving as a URL Shortener Service
 
 - /shorten/:shortCode
 > Redirects you to long URL
-> Method: GET
+>> Method: GET
 >
 > Example Request
 >> ```bash
