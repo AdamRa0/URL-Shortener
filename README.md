@@ -32,7 +32,7 @@ Minimalistic API serving as a URL Shortener Service
 >> ```
 >> StatusCode: 201
 
-- /shorten/<shortCode>
+- /shorten/:shortCode
 > Redirects you to long URL
 > Method: GET
 >
