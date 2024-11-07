@@ -12,5 +12,5 @@ model ShortLink {
     url String @unique
     shortCode String @unique
     createdAt DateTime @default(now())
-    updatedAt DateTime
+    updatedAt DateTime @default(now())
 }
