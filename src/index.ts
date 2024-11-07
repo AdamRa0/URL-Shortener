@@ -32,17 +32,31 @@ router.post("/", async (req: Request, res: Response) => {
     const shortCode = await prisma.shortLink.create({ data: data });  
 
     const response: Res = {
-        "message": "Shortcode created successfully",
-        "shortCode": shortCode.shortCode,
+        message: "Shortcode created successfully",
+        shortCode: shortCode.shortCode,
     }
 
     res.json(response);
     res.statusCode = 201;
 })
 
-router.get('/:shortCode', (req: Request, res: Response) => {
-    res.json("Get long form of shortened URL");
-    res.statusCode = 200;
+router.get('/:shortCode', async (req: Request, res: Response) => {
+    const shortCode = req.params.shortCode;
+    const shortLink = await prisma.shortLink.findFirst({
+        where: {
+            shortCode: shortCode
+        }
+    });
+
+    if (shortLink !== null) {
+        return res.redirect(shortLink.url);
+    }
+
+    const response: Res = {
+        message: "Shortlink not found"
+    }
+    res.json(response);
+    res.statusCode = 404;
 })
 
 router.patch("/:shortCode", (req: Request, res: Response) => {
