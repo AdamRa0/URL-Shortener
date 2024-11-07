@@ -53,7 +53,7 @@ router.get('/:shortCode', async (req: Request, res: Response) => {
     }
 
     const response: Res = {
-        message: "Shortlink not found"
+        message: "Shortcode not found"
     }
     res.json(response);
     res.statusCode = 404;
